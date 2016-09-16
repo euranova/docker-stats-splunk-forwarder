@@ -1,7 +1,8 @@
-FROM outcoldman/splunk:6.3.1-forwarder
+FROM euranova/splunk:latest-forwarder
 MAINTAINER Denis Gladkikh <docker-stats-splunk-forwarder@denis.gladkikh.email>
 
 ENV DOCKER_VERSION 1.9.0
+ENV SPLUNK_BACKUP_DOCKER_APP /opt/splunk
 ENV SPLUNK_BACKUP_DOCKER_APP ${SPLUNK_BACKUP_DEFAULT_ETC}/etc/apps/docker
 
 RUN apt-get update \
